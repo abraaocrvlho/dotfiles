@@ -1,0 +1,18 @@
+2020/12/04-04:52:07.356 5a4 Reusing MANIFEST /home/coder/.config/chromium/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/12/04-04:52:07.356 5a4 Recovering log #20
+2020/12/04-04:52:07.358 5a4 Reusing old log /home/coder/.config/chromium/Default/Sync Data/LevelDB/000020.log 
+2020/12/04-05:19:23.331 a88 Level-0 table #24: started
+2020/12/04-05:19:23.508 a88 Level-0 table #24: 100266 bytes OK
+2020/12/04-05:19:23.638 a88 Delete type=0 #20
+2020/12/04-06:05:04.757 15db Level-0 table #26: started
+2020/12/04-06:05:04.915 15db Level-0 table #26: 101457 bytes OK
+2020/12/04-06:05:04.990 15db Delete type=0 #23
+2020/12/04-06:05:04.990 14e7 Compacting 4@0 + 1@1 files
+2020/12/04-06:05:05.157 14e7 Generated table #27@0: 73 keys, 11275 bytes
+2020/12/04-06:05:05.157 14e7 Compacted 4@0 + 1@1 files => 11275 bytes
+2020/12/04-06:05:05.231 14e7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/04-06:05:05.231 14e7 Delete type=2 #24
+2020/12/04-06:05:05.231 14e7 Delete type=2 #19
+2020/12/04-06:05:05.231 14e7 Delete type=2 #26
+2020/12/04-06:05:05.231 14e7 Delete type=2 #21
+2020/12/04-06:05:05.231 14e7 Delete type=2 #17

@@ -1,0 +1,6 @@
+2020/12/04-04:52:07.358 5af Reusing MANIFEST /home/coder/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2020/12/04-04:52:07.358 5af Recovering log #11
+2020/12/04-04:52:07.358 5af Reusing old log /home/coder/.config/chromium/Default/Local Storage/leveldb/000011.log 
+2020/12/04-05:53:17.735 14e7 Level-0 table #15: started
+2020/12/04-05:53:17.896 14e7 Level-0 table #15: 18086 bytes OK
+2020/12/04-05:53:17.970 14e7 Delete type=0 #11
