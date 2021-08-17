@@ -1,0 +1,300 @@
+[colors]
+background   = #2E3440
+
+;Nord Colors
+nord_red     = #BF616A
+nord_green   = #A3BE8C
+nord_yellow  = #EBCB8B
+nord_cyan    = #88C0D0
+nord_blue    = #5E81AC
+nord_purple  = #B48EAD
+nord_orange  = #D08770
+nord_white   = #D8DEE9
+
+[bar/bar1]
+monitor = ${env:monitor1}
+width = 100%
+height = 24
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size-bottom = 0
+border-color = #282A36
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 0
+module-margin-right = 2
+
+font-0 = NotoSans:style=bold:pixelsize=10;1
+font-1 = FantasqueSansMonoNerdFont:style=Regular:pixelsize=10;1
+font-2 = IcoMoonFree:style=Regular:pixelsize=10;1
+font-3 = i3fonticon:style=Regular:pixelsize=10;1
+font-4 = MaterialIcons:style=Regular:pixelsize=11.5;3
+font-5 = IonIcons:style=Medium:pixelsize=10;1
+font-6 = NotoSansDisplayNF:style=Regular:pixelsize=11;2
+
+modules-left = bspwm
+modules-center =
+modules-right = backlight pulseaudio wlan date time battery powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+separator = "|  "
+padding = 2
+wm-restack = bspwm
+
+;BAR 2
+
+[bar/bar2]
+monitor = ${env:monitor2}
+width = 100%
+height = 24
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size-bottom = 0
+border-color = #282A36
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 0
+module-margin-right = 2
+
+font-0 = NotoSans:style=bold:pixelsize=9;1
+font-1 = FantasqueSansMonoNerdFont:style=Regular:pixelsize=10;1
+font-2 = IcoMoonFree:style=Regular:pixelsize=10;1
+font-3 = i3fonticon:style=Regular:pixelsize=10;1
+font-4 = MaterialIcons:style=Regular:pixelsize=11.5;3
+font-5 = IonIcons:style=Medium:pixelsize=10;1
+font-6 = NotoSansDisplayNF:style=Regular:pixelsize=11;2
+
+modules-left = bspwm
+modules-center =
+modules-right = pulseaudio wlan date time battery powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+separator = "|  "
+padding = 2
+wm-restack = bspwm
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+reverse-scroll = false
+
+ws-icon-0 = term;
+ws-icon-1 = chat;
+ws-icon-2 = www;
+ws-icon-3 = archiver;
+ws-icon-4 = code;
+ws-icon-5 = media;
+ws-icon-6 = discord;
+ws-icon-7 = tester;
+ws-icon-8 = slack;
+ws-icon-default = 
+
+label-focused = %icon%
+label-focused-background = #2E3440
+label-focused-foreground = ${colors.nord_blue}
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-padding = 2
+
+label-urgent = %icon%
+label-urgent-background = #2E3440
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #595959
+label-empty-padding = 2
+
+label-monocle = 
+label-monocle-padding = 2
+label-monocle-background = #2E3440
+label-monocle-foreground =  ${colors.nord_blue}
+
+label-floating = 
+label-floating-padding = 2
+label-floating-background = #2E3440
+label-floating-foreground = ${colors.nord_blue}
+
+[module/backlight]
+type = internal/backlight
+
+card = amdgpu_bl0
+enable-scroll = true
+
+format = <ramp> <label>
+
+label = %percentage:3%%
+label-foreground = #D8DEE9
+
+ramp-0 = 
+ramp-foreground = #D8DEE9
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-volume  = %percentage%%
+label-volume-foreground = ${colors.nord_yellow}
+
+format-muted = <label-muted>
+label-muted  = 
+label-muted-foreground = #EBCB8B
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.nord_yellow}
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+label-volume  = %percentage%%
+
+format-muted = <label-muted>
+label-muted  = 
+label-muted-foreground = #EBCB8B
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.nord_yellow}
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-connected-foreground = ${colors.nord_purple}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.nord_purple}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%d/%m/%Y"
+date-alt = "%a Week %V"
+
+time = %H:%M
+time-alt = %H:%M
+
+format-prefix = " "
+format-prefix-foreground = ${colors.nord_green}
+
+label = %date%
+label-foreground = ${colors.nord_green}
+
+[module/time]
+type = internal/date
+interval = 5
+
+time = %H:%M
+format-prefix = " "
+format-prefix-foreground = ${colors.nord_orange}
+label = %time%
+label-foreground = ${colors.nord_orange}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+label-full-foreground = ${colors.nord_cyan}
+
+format-charging = <animation-charging> <label-charging>
+label-charging-foreground = ${colors.nord_cyan}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging-foreground = ${colors.nord_cyan}
+
+format-prefix = " "
+
+format-prefix-foreground = ${colors.nord_cyan}
+
+ramp-capacity-0 =  
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.nord_cyan}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.nord_cyan}
+animation-charging-framerate = 750
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = " "
+label-open-foreground = ${colors.nord_red}
+label-close =  cancel
+label-close-foreground = ${colors.nord_red}
+label-separator = |
+label-separator-foreground = ${colors.nord_red}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+;[global/wm]
+;margin-top = 0
+;margin-bottom = 0
+
+; vim:ft=dosini
