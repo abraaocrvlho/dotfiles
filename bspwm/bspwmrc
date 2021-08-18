@@ -6,6 +6,12 @@ dunst &
 
 feh --bg-fill /home/coder/Downloads/nord.png
 
+# Cursor
+xsetroot -cursor_name left_ptr & 
+
+# Startup
+"${HOME}/.config/bspwm/startup.sh"
+
 #Capture of displays to envs
 export monitor1=$(xrandr |grep ' connected'|sed -n 1p|awk '{print $1}')
 export monitor2=$(xrandr |grep ' connected'|sed -n 2p|awk '{print $1}')
@@ -46,6 +52,8 @@ bspc rule -a discord          desktop='^7'
 bspc rule -a insomnia         desktop='^8'
 bspc rule -a Slack            desktop='^9'
 
+# Polybar
 ~/.config/polybar/launch.sh
 
+# Scripts
 ~/.config/scripts/bat.sh
