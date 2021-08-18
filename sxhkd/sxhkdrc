@@ -65,10 +65,6 @@ super + shift + u
 
 #----------------------Kitty configuration--------------------------#
 
-#Kitty
-alt + {f, g}
-  bspc node -t {floating,fullscreen}
-
 #Move a floating window
 ctrl + alt + {Left,Down,Up,Right}
   bspc node -v {-20 0,0 +20,0 -20,+20 0}
