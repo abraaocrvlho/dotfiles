@@ -1,15 +1,15 @@
 [colors]
-background   = #2E3440
+background   = #282A36
 
-;Nord Colors
-nord_red     = #BF616A
-nord_green   = #A3BE8C
-nord_yellow  = #EBCB8B
-nord_cyan    = #88C0D0
-nord_blue    = #5E81AC
-nord_purple  = #B48EAD
-nord_orange  = #D08770
-nord_white   = #D8DEE9
+;Dracula Colors
+dracula_red     = #FF5555
+dracula_green   = #50FA7B
+dracula_yellow  = #F1FA8C
+dracula_cyan    = #8BE9FC
+dracula_purple  = #BD93F9
+dracula_orange  = #FFB86C
+dracula_pink    = #FF79C6
+dracula_work    = #F7D0E3
 
 [bar/bar1]
 monitor = ${env:monitor1}
@@ -112,15 +112,15 @@ ws-icon-8 = slack;
 ws-icon-default = 
 
 label-focused = %icon%
-label-focused-background = #2E3440
-label-focused-foreground = ${colors.nord_blue}
+label-focused-background = #282A36
+label-focused-foreground = ${colors.dracula_work}
 label-focused-padding = 2
 
 label-occupied = %icon%
 label-occupied-padding = 2
 
 label-urgent = %icon%
-label-urgent-background = #2E3440
+label-urgent-background = #282A36
 label-urgent-padding = 2
 
 label-empty = %icon%
@@ -129,13 +129,13 @@ label-empty-padding = 2
 
 label-monocle = 
 label-monocle-padding = 2
-label-monocle-background = #2E3440
-label-monocle-foreground =  ${colors.nord_blue}
+label-monocle-background = #282A36
+label-monocle-foreground =  ${colors.dracula_work}
 
 label-floating = 
 label-floating-padding = 2
-label-floating-background = #2E3440
-label-floating-foreground = ${colors.nord_blue}
+label-floating-background = #282A36
+label-floating-foreground = ${colors.dracula_work}
 
 [module/backlight]
 type = internal/backlight
@@ -156,7 +156,7 @@ type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
 label-volume  = %percentage%%
-label-volume-foreground = ${colors.nord_yellow}
+label-volume-foreground = ${colors.dracula_yellow}
 
 format-muted = <label-muted>
 label-muted  = 
@@ -165,7 +165,7 @@ label-muted-foreground = #EBCB8B
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${colors.nord_yellow}
+ramp-volume-foreground = ${colors.dracula_yellow}
 
 [module/alsa]
 type = internal/alsa
@@ -180,7 +180,7 @@ label-muted-foreground = #EBCB8B
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${colors.nord_yellow}
+ramp-volume-foreground = ${colors.dracula_yellow}
 
 [module/wlan]
 type = internal/network
@@ -189,14 +189,14 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-connected-foreground = ${colors.nord_purple}
+label-connected-foreground = ${colors.dracula_purple}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.nord_purple}
+ramp-signal-foreground = ${colors.dracula_purple}
 
 [module/date]
 type = internal/date
@@ -209,10 +209,10 @@ time = %H:%M
 time-alt = %H:%M
 
 format-prefix = " "
-format-prefix-foreground = ${colors.nord_green}
+format-prefix-foreground = ${colors.dracula_green}
 
 label = %date%
-label-foreground = ${colors.nord_green}
+label-foreground = ${colors.dracula_green}
 
 [module/time]
 type = internal/date
@@ -220,40 +220,40 @@ interval = 5
 
 time = %H:%M
 format-prefix = " "
-format-prefix-foreground = ${colors.nord_orange}
+format-prefix-foreground = ${colors.dracula_pink}
 label = %time%
-label-foreground = ${colors.nord_orange}
+label-foreground = ${colors.dracula_pink}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 100
-label-full-foreground = ${colors.nord_cyan}
+label-full-foreground = ${colors.dracula_cyan}
 
 format-charging = <animation-charging> <label-charging>
-label-charging-foreground = ${colors.nord_cyan}
+label-charging-foreground = ${colors.dracula_cyan}
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging-foreground = ${colors.nord_cyan}
+label-discharging-foreground = ${colors.dracula_cyan}
 
 format-prefix = " "
 
-format-prefix-foreground = ${colors.nord_cyan}
+format-prefix-foreground = ${colors.dracula_cyan}
 
 ramp-capacity-0 =  
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.nord_cyan}
+ramp-capacity-foreground = ${colors.dracula_cyan}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colors.nord_cyan}
+animation-charging-foreground = ${colors.dracula_cyan}
 animation-charging-framerate = 750
 
 [module/powermenu]
@@ -264,11 +264,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = " "
-label-open-foreground = ${colors.nord_red}
+label-open-foreground = ${colors.dracula_red}
 label-close =  cancel
-label-close-foreground = ${colors.nord_red}
+label-close-foreground = ${colors.dracula_red}
 label-separator = |
-label-separator-foreground = ${colors.nord_red}
+label-separator-foreground = ${colors.dracula_red}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
