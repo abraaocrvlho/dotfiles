@@ -12,10 +12,6 @@ super + a
 super + alt + c
 	chromium
 
-#Firefox
-super + alt + f
-	firefox
-
 #Thunar
 super + r
 	thunar
